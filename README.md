@@ -1071,3 +1071,20 @@ node> async.dir(hello, 'world');
 
 Changes the value of async back to its original value, returning a reference to the
 async object.
+
+To run inside a docker container
+--------------------------------
+
+You can now build, package and run this microservice using Docker.
+
+Now you can build your docker image by entering from a terminal where you have access to Docker, execute the following command:
+
+```shell
+> ./mvnw clean package docker:build
+```
+
+Even push it to a repository of your choice:
+
+```shell
+> ./mvnw clean package docker:build -DpushImage
+```
